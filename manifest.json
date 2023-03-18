@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Recommendations Blocker",
+  "version": "1.0",
+  "description": "Block YouTube recommendations on the homepage and video pages.",
+  "permissions": ["tabs", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["content_script.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
